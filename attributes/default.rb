@@ -57,3 +57,4 @@ default['sssd_ldap']['sssd_conf']['max_id'] = '0'
 default['sssd_ldap']['ldap_sudo'] = false
 default['sssd_ldap']['ldap_autofs'] = false
 default['sssd_ldap']['ldap_ssh'] = false
+default['sssd_ldap']['delay_restart'] = true

@@ -82,7 +82,7 @@ template '/etc/sssd/sssd.conf' do
     notifies :run, 'execute[authconfig]', :immediately
   end
 
-  notifies :restart, 'service[sssd]'
+  notifies :restart, 'service[sssd]', node['sssd_ldap']['delay_restart'] ? :delayed : :immediately
 end
 
 # NSCD and SSSD don't play well together.
